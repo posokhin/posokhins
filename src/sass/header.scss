@@ -1,0 +1,197 @@
+.header{
+    padding: 1rem;
+    background: #162D4F;
+    position: relative;
+
+    @media screen and (max-width:360px){
+        padding: f2(16,0);
+    }
+
+    &__wrap{
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo{
+        width: 30%;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width:1200px){
+            width: 33%;
+        }
+        @media screen and (max-width:1000px){
+            flex: 1 1 auto;
+        }
+
+        &-left{
+            width: 10%;
+            height: 40px;
+            margin-right: f1(20);
+
+            @media screen and (max-width:1000px){
+                width: 50px;
+                margin-right: 0;
+            }
+            @media screen and (max-width:360px){
+                width: 40px;
+                height: 30px;
+            }
+        }
+
+        &-squares{
+            position: relative;
+            
+            &-yellow{
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                background: #FFDE00;
+                z-index: 9;
+                @media screen and (max-width:360px){
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            &-blue{
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                background: #0065FF;
+                top: 10px;
+                left: 10px;
+                @media screen and (max-width:360px){
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        &-title{
+            font-family: Holtwood One SC;
+            color: white;
+            font-size: 3vmax;
+            font-weight: normal;
+
+            @media screen and (min-width: 1200px ) {
+                font-size: f1(30);
+            }
+        }
+    }
+
+    &__nav{
+        width: 70%;
+        &_mobile{
+            @media screen and (max-width:1000px){
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                position: absolute;
+                top: 99%;
+                right: -1000px;
+                background: #162D4F;
+                width: 500px;
+                height: 100vh;
+                z-index: 9999;
+                display: none;
+            }
+            @media screen and (max-width:760px){
+                width: 100%;
+            } 
+        }
+        
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        &_mobile{
+            @media screen and (max-width:1000px){
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+            } 
+        }
+    }
+    &__item{
+        margin-right: f1(30);
+        position: relative;
+        @media screen and (max-width:1200px){
+            margin-right: 0px;
+        } 
+        
+        @media screen and (max-width:1000px){
+            margin-bottom: f1(20);
+            &:last-child{
+                margin-bottom: 0px;
+            }
+            &:first-child{
+                margin-top: f1(20);
+            }
+        } 
+
+        &-mobile{
+            display: none;
+            width: 100%;
+            justify-content: center;
+            margin-top: f1(10);
+            @media screen and (max-width:1000px){
+                display: flex;
+            } 
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        &-overlay{
+            width: 25px;
+            height: 25px;
+            background: #0065FF;
+            display: block;
+            position: absolute;
+            top: 14px;
+            left: -10px;
+        }
+    }
+    &__link{
+        color: #FFDE00;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: relative;
+        padding: f2(20,0);
+        transition: all 0.3s;
+
+        &:hover{
+            color: white;
+        }
+    }
+    &__social{
+        width: 10%;
+
+        &-head{
+            @media screen and (max-width:1200px){
+                display: none;
+            }
+        }
+        
+        &-list{
+            display: flex;
+            justify-content: center;
+        }
+        &-item{
+            margin-right: f1(20);
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        &-link{
+            color: #FFDE00;
+            font-size: f1(25);
+            transition: all 0.3s;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+}

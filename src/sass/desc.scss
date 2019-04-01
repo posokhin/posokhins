@@ -1,0 +1,38 @@
+.descript{
+    padding: f2(50,0) f2(0,0);
+    &__wrap{
+        display: flex;
+
+        @media screen and (max-width:600px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+
+    &__left{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width:600px) {
+            width: 100%;
+        }
+
+        p{
+            font-family: Holtwood One SC;
+            font-size: 4vmax;
+            text-align: center;
+        }
+    }
+    &__right{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width:600px) {
+            width: 100%;
+            margin-top: f1(20);
+        }
+    }
+}
